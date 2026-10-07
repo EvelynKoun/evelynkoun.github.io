@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estat Web Admin — Case Study — Evelina Kounoukla</title>
+  <meta name="description" content="From a Java launcher to a web app: redesigning Estat Web Admin on the European Commission's eUI design system.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="work" data-project="estat-web-admin">
+
+<div data-site="nav"></div>
+
+<main>
+
+  <!-- ═════════ Hero ═════════ -->
+  <header class="cs-hero container">
+    <p class="cs-hero__eyebrow">Case study · Statistical data platform</p>
+    <h1 class="page-title" data-load aria-label="Estat Web Admin">
+      <span class="line"><span>Estat</span></span>
+      <span class="line"><span>Web Admin</span></span>
+    </h1>
+    <h2 class="cs-hero__sub reveal">From a Java launcher to a web app: redesigning Estat Web Admin on the eUI design system</h2>
+
+    <div class="shot-panel reveal">
+      <img src="assets/estat-web-admin/new-objects.png" alt="Redesigned Objects screen built from eUI components" width="2880" height="1817">
+    </div>
+  </header>
+
+  <!-- ═════════ About ═════════ -->
+  <section class="cs-section container">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">About the project</p></div>
+      <div class="col-lg-9">
+        <p class="cs-lead reveal">
+          Estat Web Admin is the tool statisticians use to write scripts, browse data objects and inspect results in Eurostat's MDT environment.
+          The old version ran from a Java launcher.
+        </p>
+        <p class="cs-lead reveal">
+          I redesigned its three core screens, one at a time with a business analyst, using the
+          <a href="https://euidev.ecdevops.eu/eui-showcase-ux-components-21.x/showcase-design-system/home" target="_blank" rel="noopener">eUI design system</a>
+          of the European Commission.
+        </p>
+
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+          <div><dt>Timeline</dt><dd>2020-2021</dd></div>
+          <div><dt>Team</dt><dd>Business analyst, developers</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+        </dl>
+
+        <div class="cs-tags reveal">
+          <span>UX &amp; UI design</span>
+          <span>eUI design system</span>
+          <span>Public sector</span>
+          <span>Data tools</span>
+          <span>3 design iterations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ Result up front ═════════ -->
+  <section class="cs-section container" id="result">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">The result, up front</p></div>
+      <div class="col-lg-9">
+        <!-- <p class="cs-note reveal">Click any screen to preview it, then use the arrows to move through the gallery.</p> -->
+      </div>
+    </div>
+    <div class="row g-4 mt-1" data-gallery>
+      <div class="col-lg-4 screen reveal">
+        <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-language-interactive.png"><img src="assets/estat-web-admin/new-language-interactive.png" alt="Redesigned Language Interactive screen" loading="lazy" decoding="async"></button>
+        <h4>Language Interactive</h4>
+        <p>Write and run scripts.</p>
+      </div>
+      <div class="col-lg-4 screen reveal" style="--d:.08s">
+        <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-objects.png"><img src="assets/estat-web-admin/new-objects.png" alt="Redesigned Objects screen" loading="lazy" decoding="async"></button>
+        <h4>Objects</h4>
+        <p>Find and manage data objects.</p>
+      </div>
+      <div class="col-lg-4 screen reveal" style="--d:.16s">
+        <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-results.png"><img src="assets/estat-web-admin/new-results.png" alt="Redesigned Results screen" loading="lazy" decoding="async"></button>
+        <h4>Results</h4>
+        <p>Read the output.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 01 Research ═════════ -->
+  <section class="cs-section container" id="research">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(01) Research</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Understanding what each screen is for before touching its look</h2>
+        <div class="mt-4 reveal">
+          <p class="cs-copy">The application had grown around its functionality. Screens worked, but they looked like a different product from the rest of the Commission's web tools, and the way to use them was learned by doing.
+            Rather than start from a blank canvas, I started from the live system. My motivation was to learn how to bring a dense, expert tool into a design system without flattening what experts rely on.</p>
+          <p class="cs-copy">I sat down with the business analyst and went through <b>every screen, one by one</b>: who uses it, what they do there, which parts are daily and which are occasional, and which labels are domain vocabulary I must not rename.
+            The analyst owned the domain, while I owned the question, “What would a first-time user make of this?”</p>
+        </div>
+
+        <div class="callout my-5 reveal">
+          <span class="kicker">Context, constraints, goal</span>
+          Three screens carry most of the work: <b>Language Interactive</b> (write and run scripts), <b>Objects</b> (find and manage data objects) and <b>Results</b> (read the output).
+          The constraint was the design system: every pattern had to exist in eUI, or be a justified extension of it. The goal was one consistent, learnable product without removing any capability.
+        </div>
+
+        <h3 class="cs-h3 mt-5 mb-3 reveal">What the audit found</h3>
+        <div class="table-responsive reveal">
+          <table class="table-cols">
+            <thead><tr><th style="width:22%">Screen</th><th>Finding</th><th>Agreed with the analyst</th></tr></thead>
+            <tbody>
+              <tr><td>Language Interactive</td><td>Compile, execute and debug are three unlabeled icons. A first-time user has to hover or guess, and the script tab gives no hint that more than one script can be open.</td><td>Keep all three actions, group them, and make them self-explanatory. Support several open scripts.</td></tr>
+              <tr><td>Objects</td><td>The object type is a single letter (D, F, N, R, T) with an icon in a separate column. The owner tree, filters and column picker sit in different corners of the screen.</td><td>Keep the letters, since users know them. Gather search, filters and actions in one toolbar above the list.</td></tr>
+              <tr><td>Results</td><td>Every cell has a border. Nothing signals that columns can be sorted. Obs Decimals, Obs Conf and Obs Status are mostly empty but take the same space as Obs Value.</td><td>Lighten the table, add sorting, and let users show or hide columns.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 02 Wireframing ═════════ -->
+  <section class="cs-section container" id="wireframes">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(02) Sketching &amp; wireframing</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Annotating the old screens as the shared brief</h2>
+        <p class="cs-copy mt-4 reveal">Instead of redrawing low-fidelity wireframes in a vacuum, I annotated screenshots of the existing screens. The annotations became the working document between the analyst, the developers and me.
+          Each note names the eUI component to use (for example the tree list for the owner tree, a dropdown for the Owner and Type filters, an outline dropdown button for Actions and Columns),
+          points at what should be labeled, and flags what is <b>optional</b> so the developers did not build more than the analyst had approved.</p>
+      </div>
+    </div>
+
+    <div class="row g-4 g-lg-5 mt-1" data-gallery>
+      <div class="col-lg-4 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/estat-web-admin/old-language-interactive-annotated.jpg">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Language Interactive · annotated</span></div>
+          <img src="assets/estat-web-admin/old-language-interactive-annotated.jpg" alt="Old Language Interactive screen with annotations for compile, execute and debug" loading="lazy" decoding="async">
+        </button>
+        <h4>Language Interactive</h4>
+        <p>Compile, execute and debug get labels, so they stop being three mystery icons.</p>
+      </div>
+      <div class="col-lg-4 screen reveal" style="--d:.08s">
+        <button type="button" class="browser" data-lightbox="assets/estat-web-admin/old-objects-annotated.jpg">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Objects · annotated</span></div>
+          <img src="assets/estat-web-admin/old-objects-annotated.jpg" alt="Old Objects screen annotated with eUI component names" loading="lazy" decoding="async">
+        </button>
+        <h4>Objects</h4>
+        <p>Component names for the tree, the dropdown filters and the Actions and Columns buttons, plus the optional pieces.</p>
+      </div>
+      <div class="col-lg-4 screen reveal" style="--d:.16s">
+        <button type="button" class="browser" data-lightbox="assets/estat-web-admin/old-results-annotated.jpg">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Results · annotated</span></div>
+          <img src="assets/estat-web-admin/old-results-annotated.jpg" alt="Old Results screen with copy and paste annotations" loading="lazy" decoding="async">
+        </button>
+        <h4>Results</h4>
+        <p>Copy and paste called out in the toolbar, so the data can leave the screen.</p>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-4">
+      <div class="col-lg-9 offset-lg-3">
+        <div class="callout reveal">
+          <span class="kicker">Moment of conflict</span>
+          On the script editor the toolbar mixed two different jobs: running code (compile, execute, debug) and handling the file (save, print, copy, paste). Annotating it showed that the two sets sat side by side with the same visual weight, so a mis-click on "debug" cost as much as a click on "print".
+        </div>
+        <div class="callout callout--accent mt-3 reveal">
+          <span class="kicker">UX decision</span>
+          Group the toolbar by intent: run actions first, file actions second, and text search (<span class="mono">Find next</span>, <span class="mono">Replace</span>) as words, not icons, because editing is where people already read labels. Settings and history move to the far right, out of the way.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 03 Design system ═════════ -->
+  <section class="cs-section container" id="designsystem">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(03) Design system</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Building every screen from eUI instead of drawing new parts</h2>
+        <p class="cs-copy mt-4 reveal">The European Commission publishes <a href="https://euidev.ecdevops.eu/eui-showcase-ux-components-21.x/showcase-design-system/home" target="_blank" rel="noopener">eUI</a> as its shared design system, so the rule was simple: look for an eUI component first, and only extend it when the screen truly needs more.
+          For each screen I mapped the old pattern to its eUI counterpart with the analyst, so that nobody had to guess during development.</p>
+
+        <div class="table-responsive mt-4 reveal">
+          <table class="table-cols">
+            <thead><tr><th style="width:26%">Old pattern</th><th>eUI building block</th><th style="width:26%">Where it shows up</th></tr></thead>
+            <tbody>
+              <tr><td>Java launcher header and status line</td><td>Application header with logo and app name, user welcome and avatar, blue breadcrumb bar, status footer</td><td>All screens</td></tr>
+              <tr><td>Single tab per screen</td><td>Tabs with a back chevron and closable tabs; a second tab level for open scripts</td><td>Launch Pad, Language Interactive, Objects, Results</td></tr>
+              <tr><td>Owner list</td><td>Tree list, with Owner dropdown and Collapse all</td><td>Objects</td></tr>
+              <tr><td>Loose icons and text links</td><td>Primary button for the main action (Look for), outline dropdown buttons for Actions, Columns, Filters</td><td>Objects, Results</td></tr>
+              <tr><td>Bordered grid</td><td>Table with sortable headers, striped rows and pagination</td><td>Objects, Results</td></tr>
+              <tr><td>Unlabeled toolbar icons</td><td>Icon button groups plus text buttons for Find next and Replace</td><td>Language Interactive, Results</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout--accent mt-5 reveal">
+          <span class="kicker">One rule</span>
+          One main action per screen, in the primary blue. Everything else is outlined or an icon. That single rule gave the three screens the same hierarchy without extra styling.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 04 Iterations ═════════ -->
+  <section class="cs-section container" id="iterations">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(04) Prototyping &amp; iteration</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Three passes, each one reviewed with the analyst</h2>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4 reveal"><div class="iter"><h4>Iteration 1: map</h4><p>Annotate the old screens, agree what stays, what is optional and which eUI component replaces each part.</p></div></div>
+          <div class="col-md-4 reveal" style="--d:.08s"><div class="iter"><h4>Iteration 2: rebuild</h4><p>Recreate the three screens in eUI with the same data and the same labels, so the review could focus on structure.</p></div></div>
+          <div class="col-md-4 reveal" style="--d:.16s"><div class="iter"><h4>Iteration 3: refine</h4><p>Add the controls that the new layout made possible and tidy details found while walking the analyst through the rebuild.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-gallery>
+      <h3 class="cs-h3 mt-5 pt-lg-4 mb-4 reveal">Language Interactive</h3>
+      <div class="row g-4 g-lg-5">
+        <div class="col-md-6 screen reveal">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/old-language-interactive-annotated.jpg" data-title="Language Interactive — before"><img src="assets/estat-web-admin/old-language-interactive-annotated.jpg" alt="Before: Language Interactive" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--before">Before</span></h4>
+          <p>One script, three icons that need explaining.</p>
+        </div>
+        <div class="col-md-6 screen reveal" style="--d:.08s">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-language-interactive.png" data-title="Language Interactive — after"><img src="assets/estat-web-admin/new-language-interactive.png" alt="After: Language Interactive" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--after">After</span></h4>
+          <p>Open scripts and files as sub-tabs (a script, a function file, an .msl algorithm). Grouped toolbar, Find next and Replace, line numbers kept.</p>
+        </div>
+      </div>
+
+      <h3 class="cs-h3 mt-5 pt-lg-4 mb-4 reveal">Objects</h3>
+      <div class="row g-4 g-lg-5">
+        <div class="col-md-6 screen reveal">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/old-objects-annotated.jpg" data-title="Objects — before"><img src="assets/estat-web-admin/old-objects-annotated.jpg" alt="Before: Objects" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--before">Before</span></h4>
+          <p>Owner tree, filters and menus scattered around a plain list.</p>
+        </div>
+        <div class="col-md-6 screen reveal" style="--d:.08s">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-objects.png" data-title="Objects — after"><img src="assets/estat-web-admin/new-objects.png" alt="After: Objects" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--after">After</span></h4>
+          <p>A collapsible Users panel with Owner and Collapse all, one toolbar (Look for, Actions, Columns, Recycle bin, Filters, Load, History), sortable columns and pagination.</p>
+        </div>
+      </div>
+
+      <h3 class="cs-h3 mt-5 pt-lg-4 mb-4 reveal">Results</h3>
+      <div class="row g-4 g-lg-5">
+        <div class="col-md-6 screen reveal">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/old-results-annotated.jpg" data-title="Results — before"><img src="assets/estat-web-admin/old-results-annotated.jpg" alt="Before: Results" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--before">Before</span></h4>
+          <p>Fully gridded table, four toolbar icons, no sorting cue.</p>
+        </div>
+        <div class="col-md-6 screen reveal" style="--d:.08s">
+          <button type="button" class="shot-btn" data-lightbox="assets/estat-web-admin/new-results.png" data-title="Results — after"><img src="assets/estat-web-admin/new-results.png" alt="After: Results" loading="lazy" decoding="async"></button>
+          <h4><span class="ba-tag ba-tag--after">After</span></h4>
+          <p>Sort arrows on each header, striped rows without cell borders, a Columns button for the empty observation fields, and added save and chart actions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 05 Outcomes ═════════ -->
+  <section class="cs-section container" id="outcomes">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(05) Outcomes &amp; lessons learned</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">What the redesign delivers</h2>
+        <ol class="facts mt-4 reveal">
+          <li><span>(01)</span><div><b>One product, not three screens.</b> Header, tabs, buttons and tables now behave the same everywhere, because they come from the same system.</div></li>
+          <li><span>(02)</span><div><b>Actions you can read.</b> Run actions, file actions and search are separated by intent and labeled where it matters.</div></li>
+          <li><span>(03)</span><div><b>Data that is easier to scan.</b> Sortable, striped tables and a column picker keep the sparse observation fields out of the way.</div></li>
+          <li><span>(04)</span><div><b>Less custom work for developers.</b> Each part is a named eUI component, agreed up front.</div></li>
+        </ol>
+
+        <h3 class="cs-h3 mt-5 mb-3 reveal">What I'd do differently</h3>
+        <ol class="facts reveal">
+          <li><span>(A)</span><div><b>Test with statisticians earlier.</b> Walkthroughs with the analyst caught a lot, but the daily users hold the habits no document describes.</div></li>
+          <li><span>(B)</span><div><b>Annotate in the design tool from day one.</b> Annotated screenshots worked as a brief, but a single living file would have kept the notes and the final screens together.</div></li>
+          <li><span>(C)</span><div><b>Give the widest tables their own pass.</b> Results can grow to many columns; saved column sets per user would be the next step.</div></li>
+        </ol>
+
+        <p class="cs-note mt-5 reveal">Estat Web Admin redesign, built on the European Commission eUI design system. Data shown in the screens is test data.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-site="more-work"></div>
+<div data-site="footer"></div>
+
+<!-- Bootstrap JS powers the screenshot gallery (added by site.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

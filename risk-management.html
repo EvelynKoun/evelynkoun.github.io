@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk Management — Case Study — Evelina Kounoukla</title>
+  <meta name="description" content="Turning a generic admin template into a bank-grade risk platform: research, information architecture, design system and final screens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="work" data-project="risk-management">
+
+<div data-site="nav"></div>
+
+<main>
+
+  <!-- ═════════ Hero ═════════ -->
+  <header class="cs-hero container">
+    <p class="cs-hero__eyebrow">Case study · Risk &amp; Compliance Platform</p>
+    <h1 class="page-title" data-load aria-label="Risk Management">
+      <span class="line"><span>Risk</span></span>
+      <span class="line"><span>Management</span></span>
+    </h1>
+    <h2 class="cs-hero__sub reveal">Turning a generic admin template into a bank-grade risk platform</h2>
+
+    <div class="shot-panel reveal">
+      <img src="assets/risk-management/dashboard.png" alt="Risk management platform dashboard with KPI cards, import volume chart and exposure breakdown" width="3840" height="2304">
+    </div>
+  </header>
+
+  <!-- ═════════ About ═════════ -->
+  <section class="cs-section container">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">About the project</p></div>
+      <div class="col-lg-9">
+        <p class="cs-lead reveal">
+          Risk management platform helps financial institutions gather and reconcile data, then calculate, aggregate and report regulatory credit, market,
+          operational and concentration risk in a natively integrated, modular environment.
+        </p>
+        <p class="cs-lead reveal">
+          The product's UI was built on <a href="https://adminlte.io/themes/AdminLTE/index.html" target="_blank" rel="noopener">AdminLTE</a>, a free general-purpose dashboard template.
+          My job was the style guide, information architecture and UX decisions that turn that template into something bank back-office users can work in all day.
+        </p>
+
+        <dl class="cs-meta reveal">
+          <div><dt>Role</dt><dd>Product &amp; UI/UX Designer</dd></div>
+          <div><dt>Timeline</dt><dd>2017 – 2018</dd></div>
+          <div><dt>Team</dt><dd>Consultants, developers</dd></div>
+          <div><dt>Tools</dt><dd>HTML/CSS, Bootstrap, Adobe XD</dd></div>
+        </dl>
+
+        <div class="cs-tags reveal">
+          <span>Product design</span>
+          <span>UX &amp; UI design</span>
+          <span>FinTech · Banking</span>
+          <span>Design-thinking approach</span>
+          <span>Dashboard</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 01 Research ═════════ -->
+  <section class="cs-section container" id="research">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(01) Research</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Learning a domain I wasn't trained in, and auditing what I inherited</h2>
+
+        <div class="mt-4 reveal">
+          <p class="cs-copy">Before any pixels: COREP, IRB vs. standardised approaches, XBRL taxonomies, and what "exposure," "obligor" and "concentration risk" actually mean.
+            I couldn't design a status model for an approval chain without understanding what a change request is in a regulated bank, or why an audit trail is non-negotiable.</p>
+          <p class="cs-copy">I worked through the product's existing data model and the regulatory vocabulary with engineering and product, then mapped the terms users would see on screen against
+            the terms the database used the two didn't always match, and where they didn't, the screen had to win.</p>
+          <p class="cs-copy">These screens were created new rather than inherited, so design decisions were being made while development was already moving.
+            Without a shared style guide, every new module risked inventing its own buttons, table and status treatment.</p>
+        </div>
+
+        <div class="callout my-5 reveal">
+          <span class="kicker">Context, constraints, goal</span>
+          The product spans four risk domains and multiple approaches credit, market, operational and concentration risk, standardised through IRB.
+          A platform growing in this many directions can't be designed screen-by-screen, it needs a system underneath it.
+          The goal wasn't to simplify what a risk officer sees an inherently dense, high-stakes dataset but to make it scannable and trustworthy.
+        </div>
+
+        <h3 class="cs-h3 mt-5 mb-3 reveal">Auditing the template I was handed</h3>
+        <p class="cs-copy reveal">AdminLTE is built to demo a bit of everything: widgets, chat panels, social cards, calendars.
+          Risk management platform needs COREP reporting, exposure reconciliation, XBRL validation and an approval chain almost nothing in the stock template maps to that.
+          I went through every component and sorted it into four buckets, which became the brief for everything after.</p>
+
+        <table class="table-site mt-4 reveal">
+          <tbody>
+            <tr><th>Keep</th><td>Sidebar shell, box/panel pattern, data tables, breadcrumbs, paginator</td></tr>
+            <tr><th>Adapt</th><td>Buttons, badges/labels, modals, form controls, date picker</td></tr>
+            <tr><th>Drop</th><td>Chat widgets, social cards, to-do lists, timeline feeds, stock calendar</td></tr>
+            <tr><th>Build new</th><td>Status badges, import result log, approval queue, criteria-selection dialog, KPI cards, tasks/notifications dropdowns</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 02 Wireframes ═════════ -->
+  <section class="cs-section container" id="wireframes">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(02) Sketching &amp; wireframing</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Restructuring the navigation, then mapping the two flows that carry the product</h2>
+
+        <p class="cs-copy mt-4 reveal">The early menu mirrored the system's internal structure. Everything flat under Admin and Data Management, with related tasks scattered. I regrouped the sidebar around what people come to do: administering the platform, moving data in and out, and moving changes through the approval chain. Approvals became its own group rather than sitting inside Admin, because it's a distinct job done by distinct people.</p>
+
+        <div class="row g-3 my-4 reveal">
+          <div class="col-6 col-md-3"><div class="ia-card"><h4>Admin</h4><ul><li>Dashboard</li><li>Analytics</li><li>Audit &amp; Logs</li></ul></div></div>
+          <div class="col-6 col-md-3"><div class="ia-card"><h4>Data management</h4><ul><li>Data Import</li><li>Data Management</li></ul></div></div>
+          <div class="col-6 col-md-3"><div class="ia-card"><h4>Workflow</h4><ul><li class="is-hot">Approve Changes</li><li>COREP</li></ul></div></div>
+          <div class="col-6 col-md-3"><div class="ia-card"><h4>Downloads</h4><ul><li>Templates</li></ul></div></div>
+        </div>
+
+        <p class="cs-copy reveal">Two task flows account for most daily use: <b>import → validate → review errors → reconcile</b>, and <b>submit change → route for approval → approve or reject → audit record</b>. I wireframed both at low fidelity before touching any styling, to test where a decision gets made versus where the interface makes you go to make it.</p>
+
+        <div class="wire mt-4 mb-5 reveal">
+          <div class="wire-block mb-2" style="height:40px">topbar</div>
+          <div class="d-flex gap-2">
+            <div class="wire-block" style="flex:0 0 24%">sidebar</div>
+            <div class="flex-grow-1 d-grid gap-2">
+              <div class="wire-block" style="height:40px">page title</div>
+              <div class="wire-block" style="height:40px">filter</div>
+              <div class="wire-block" style="min-height:120px">queue table — status column + inline approve/reject</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout reveal">
+          <span class="kicker">Moment of conflict</span>
+          In the original flow, every single request routine or not, opened a modal to resolve. For a queue of thirteen, that's thirteen open-read-decide-close cycles. The wireframe made the cost visible before anything was built.
+        </div>
+        <div class="callout callout--accent mt-3 reveal">
+          <span class="kicker">UX decision</span>
+          Resolve routine approvals inline on the row, keep the full dialog for anything needing a comment or audit reason. The dialog stops being the only door,
+          it becomes the door for consequential decisions.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 03 Design system ═════════ -->
+  <section class="cs-section container" id="designsystem">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(03) Design system</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">Building a system on top of AdminLTE, not just a re-skin</h2>
+        <p class="cs-copy mt-4 reveal">
+          AdminLTE relies entirely on Bootstrap's default styling, featuring a generic stock blue and lacking a defined typographic scale beyond standard browser defaults.
+          Once the wireframes told me what the product actually needed, I formalized that into an explicit system: color ramps with fixed semantic meaning,
+          one typeface carried through every level of hierarchy, the Font Awesome set already available in the template curated down to what the product actually uses.
+          Also a small set of real components like buttons, badges, tables, forms, modals which are built once and reused everywhere instead of styled ad hoc per screen.
+          Everything below is pulled directly from the production screens, not a separate mood board.
+        </p>
+      </div>
+    </div>
+
+    <!-- Colors -->
+    <div class="row gy-4 mt-4 mt-lg-5">
+      <div class="col-lg-3"><p class="cs-label">Colors</p></div>
+      <div class="col-lg-9 reveal">
+        <p class="cs-note mb-4">Six roles, each a 9-step ramp from 900 (darkest) to 100 (lightest). Primary and Info both come from the product's blues kept as two ramps because the UI genuinely distinguishes brand actions from informational states.</p>
+
+        <div class="ramp-scale"><span></span><div><span>900</span><span>800</span><span>700</span><span>600</span><span>500</span><span>400</span><span>300</span><span>200</span><span>100</span></div></div>
+        <div class="ramps">
+          <div class="ramp"><div class="ramp__label">Primary</div><div class="ramp__steps">
+            <i style="background:#002840"></i><i style="background:#00385A"></i><i style="background:#004974"></i><i style="background:#00598E"></i><i style="background:#2B75A1"></i><i style="background:#5591B4"></i><i style="background:#80ACC7"></i><i style="background:#ABC8DA"></i><i style="background:#D5E4ED"></i></div></div>
+          <div class="ramp"><div class="ramp__label">Secondary</div><div class="ramp__steps">
+            <i style="background:#192024"></i><i style="background:#232E33"></i><i style="background:#2D3B41"></i><i style="background:#374850"></i><i style="background:#58676D"></i><i style="background:#7A858B"></i><i style="background:#9BA4A8"></i><i style="background:#BDC2C5"></i><i style="background:#DEE1E2"></i></div></div>
+          <div class="ramp"><div class="ramp__label">Info</div><div class="ramp__steps">
+            <i style="background:#003453"></i><i style="background:#004975"></i><i style="background:#005F96"></i><i style="background:#0074B8"></i><i style="background:#2B8BC4"></i><i style="background:#55A3D0"></i><i style="background:#80BADC"></i><i style="background:#ABD1E8"></i><i style="background:#D5E8F3"></i></div></div>
+          <div class="ramp"><div class="ramp__label">Success</div><div class="ramp__steps">
+            <i style="background:#003C1E"></i><i style="background:#00552A"></i><i style="background:#006D36"></i><i style="background:#008642"></i><i style="background:#2B9A62"></i><i style="background:#55AE81"></i><i style="background:#80C3A1"></i><i style="background:#ABD7C0"></i><i style="background:#D5EBE0"></i></div></div>
+          <div class="ramp"><div class="ramp__label">Warning</div><div class="ramp__steps">
+            <i style="background:#643700"></i><i style="background:#8D4E00"></i><i style="background:#B66400"></i><i style="background:#DF7B00"></i><i style="background:#E4912B"></i><i style="background:#EAA755"></i><i style="background:#EFBD80"></i><i style="background:#F4D3AB"></i><i style="background:#FAE9D5"></i></div></div>
+          <div class="ramp"><div class="ramp__label">Error / Danger</div><div class="ramp__steps">
+            <i style="background:#501B15"></i><i style="background:#70261D"></i><i style="background:#913126"></i><i style="background:#B13C2E"></i><i style="background:#BE5D51"></i><i style="background:#CB7D74"></i><i style="background:#D89E97"></i><i style="background:#E5BEBA"></i><i style="background:#F2DFDD"></i></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="row gy-4 mt-5">
+      <div class="col-lg-3"><p class="cs-label">Typography</p></div>
+      <div class="col-lg-9 reveal">
+        <p class="cs-note mb-1">One typeface <b>Roboto</b>, for every heading level, body style and data column.</p>
+        <p class="cs-note">Fallback stack: Helvetica Neue, Helvetica, Arial, sans-serif.</p>
+
+        <div class="weights" style="font-family:'Roboto',Helvetica,Arial,sans-serif">
+          <div><div style="font-size:2.8rem;font-weight:300">Aa</div><span>Light 300</span></div>
+          <div><div style="font-size:2.8rem;font-weight:400">Aa</div><span>Regular 400</span></div>
+          <div><div style="font-size:2.8rem;font-weight:400;font-style:italic">Aa</div><span>Italic</span></div>
+          <div><div style="font-size:2.8rem;font-weight:500">Aa</div><span>Medium 500</span></div>
+          <div><div style="font-size:2.8rem;font-weight:700">Aa</div><span>Bold 700</span></div>
+          <div><div style="font-size:2.8rem;font-weight:900">Aa</div><span>Black 900</span></div>
+        </div>
+
+        <div style="font-family:'Roboto',Helvetica,Arial,sans-serif">
+          <div class="type-row"><span class="tag">H1 · 32</span><div style="font-size:2rem;font-weight:700">Requests For Change</div></div>
+          <div class="type-row"><span class="tag">H2 · 26</span><div style="font-size:1.6rem;font-weight:700">Data Management</div></div>
+          <div class="type-row"><span class="tag">H3 · 22</span><div style="font-size:1.35rem;font-weight:500">Data Files</div></div>
+          <div class="type-row"><span class="tag">H4 · 18</span><div style="font-size:1.125rem;font-weight:500">Import summary</div></div>
+          <div class="type-row"><span class="tag">H5 · 16</span><div style="font-size:1rem;font-weight:500">Change Id</div></div>
+          <div class="type-row"><span class="tag">H6 · 14</span><div style="font-size:1rem;font-weight:700;letter-spacing:.03em">Modification by</div></div>
+          <div class="type-row"><span class="tag">Lead</span><div style="text-transform:uppercase;letter-spacing:.03em;color:var(--muted)">RiskAvert helps banks gather, reconcile and report regulatory risk across four domains.</div></div>
+          <div class="type-row"><span class="tag">Body</span><div>RMF_EXPOSURES is imported nightly and reconciled against the previous COREP submission before any manual edit is accepted.</div></div>
+          <div class="type-row"><span class="tag">Label</span><div style="font-weight:700">Exposure Type *</div></div>
+          <div class="type-row"><span class="tag">Small / mono</span><div class="mono" style="color:var(--muted)">1542814334291</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Iconography -->
+    <div class="row gy-4 mt-5">
+      <div class="col-lg-3"><p class="cs-label">Iconography</p></div>
+      <div class="col-lg-9 reveal">
+        <p class="cs-note mb-4">Font Awesome 4.7 the set AdminLTE already ships with, narrowed down to the icons the product actually calls on.</p>
+        <div class="icon-grid">
+          <div class="icon-item"><i class="fa fa-tachometer"></i><span>tachometer</span></div>
+          <div class="icon-item"><i class="fa fa-bar-chart"></i><span>bar-chart</span></div>
+          <div class="icon-item"><i class="fa fa-info-circle"></i><span>info-circle</span></div>
+          <div class="icon-item"><i class="fa fa-upload"></i><span>upload</span></div>
+          <div class="icon-item"><i class="fa fa-database"></i><span>database</span></div>
+          <div class="icon-item"><i class="fa fa-check-square-o"></i><span>check-square-o</span></div>
+          <div class="icon-item"><i class="fa fa-file-text-o"></i><span>file-text-o</span></div>
+          <div class="icon-item"><i class="fa fa-eye"></i><span>eye</span></div>
+          <div class="icon-item"><i class="fa fa-search"></i><span>search</span></div>
+          <div class="icon-item"><i class="fa fa-filter"></i><span>filter</span></div>
+          <div class="icon-item"><i class="fa fa-tasks"></i><span>tasks</span></div>
+          <div class="icon-item"><i class="fa fa-bell-o"></i><span>bell-o</span></div>
+          <div class="icon-item"><i class="fa fa-user-circle-o"></i><span>user-circle-o</span></div>
+          <div class="icon-item"><i class="fa fa-cog"></i><span>cog</span></div>
+          <div class="icon-item"><i class="fa fa-plus"></i><span>plus</span></div>
+          <div class="icon-item"><i class="fa fa-check"></i><span>check</span></div>
+          <div class="icon-item"><i class="fa fa-times"></i><span>times</span></div>
+          <div class="icon-item"><i class="fa fa-exclamation-triangle"></i><span>exclamation-triangle</span></div>
+          <div class="icon-item"><i class="fa fa-clock-o"></i><span>clock-o</span></div>
+          <div class="icon-item"><i class="fa fa-caret-down"></i><span>caret-down</span></div>
+          <div class="icon-item"><i class="fa fa-angle-right"></i><span>angle-right</span></div>
+          <div class="icon-item"><i class="fa fa-bars"></i><span>bars</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Components -->
+    <div class="row gy-4 mt-5">
+      <div class="col-lg-3"><p class="cs-label">Components</p></div>
+      <div class="col-lg-9 product reveal">
+        <p class="cs-note mb-4">Pulled from the real screens every button, badge, table and form control below is what actually ships on Dashboard, Data Import, Data Management and Approve Changes.</p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h4 class="cs-h4 mb-3">Buttons</h4>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <button type="button" class="btn btn-primary"><i class="fa fa-download"></i> Export summary</button>
+              <button type="button" class="btn btn-success"><i class="fa fa-upload"></i> Upload file</button>
+              <button type="button" class="btn btn-error"><i class="fa fa-trash"></i> Delete</button>
+            </div>
+            <h4 class="cs-h4 mb-3">Status badges</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="pbadgest" style="background:#0074B8">Processing</span>
+              <span class="pbadgest" style="background:#E4912B">Waiting approval</span>
+              <span class="pbadgest" style="background:#008642">Approved</span>
+              <span class="pbadgest" style="background:#B13C2E">Disapproved</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="cs-h4 mb-3">Table</h4>
+            <div class="ppanel">
+              <table class="ptable">
+                <tr><th>Change ID</th><th>Status</th></tr>
+                <tr><td class="mono">1542814334291</td><td><span class="pbadgest" style="background:#E4912B">Waiting</span></td></tr>
+                <tr><td class="mono">1542728542717</td><td><span class="pbadgest" style="background:#008642">Approved</span></td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <h4 class="cs-h4 mb-3">Form controls</h4>
+            <div class="bg-white rounded-4 p-3">
+              <div class="row g-2">
+                <div class="col-6">
+                  <label class="form-label" for="f-time">Time ID <span class="req">*</span></label>
+                  <input id="f-time" class="form-control mb-2" placeholder="Enter time ID">
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="f-type">Exposure Type <span class="req">*</span></label>
+                  <select id="f-type" class="form-select mb-2"><option>Select a type</option></select>
+                </div>
+              </div>
+              <label class="form-label" for="f-comments">Comments</label>
+              <textarea id="f-comments" class="form-control" rows="2"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="cs-h4 mb-3">Modal — add new record</h4>
+            <div class="modal-demo">
+              <div class="modal-demo__head">Add new record <i class="fa fa-times"></i></div>
+              <div class="modal-demo__body">
+                <label class="form-label" for="m-id">ID <span class="req">*</span></label>
+                <input id="m-id" class="form-control mb-2" placeholder="Enter ID">
+                <label class="form-label" for="m-cid">Contract ID <span class="req">*</span></label>
+                <input id="m-cid" class="form-control" placeholder="Enter contract ID">
+              </div>
+              <div class="modal-demo__foot">
+                <button type="button" class="btn btn-outline-primary">Cancel</button>
+                <div class="d-flex gap-2"><button type="button" class="btn btn-primary"><i class="fa fa-save"></i> Save</button><button type="button" class="btn btn-outline-secondary">Reset</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figure class="mt-5">
+          <button type="button" class="browser" data-lightbox="assets/risk-management/add-record.png" data-title="Add new record — modal in context"
+                  data-caption="This is the same modal pattern as the upload-file dialog on Data Import one header treatment, one footer button order, one set of form-control styles. So a user who has learned one dialog in the product has learned all of them.">
+            <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+            <img src="assets/risk-management/add-record.png" alt="Add new record modal in the data management screen" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="figure-cap">The actual modal in context, with two column required fields, an optional comments box, and Cancel, Save, and Reset actions in a fixed footer. The same structure was used for every create and edit flow in the product.</p>
+            <p class="figure-cap">This is the same modal pattern as the upload-file dialog on Data Import one header treatment, one footer button order, one set of form-control styles. So a user who has learned one dialog in the product has learned all of them.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 04 Prototyping ═════════ -->
+  <section class="cs-section container" id="prototype">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(04) Prototyping &amp; iteration</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">A three-tier token system, so the platform can grow into it</h2>
+        <div class="mt-4 reveal">
+          <p class="cs-copy">Rather than restyling screens one at a time, I extracted every color already in the product's CSS, deduplicated it,
+            and rebuilt it as ramps with fixed semantic meaning: <b>primitives</b> (raw ramps), <b>semantic</b> (roles like <span class="mono">color-action-danger</span>),
+            and <b>component</b> (specific usages like <span class="mono">button.primary.background</span>). This is what makes the light/dark sidebar work without duplication where
+            both skins read the same semantic tokens, so a new nav item or state is styled once.</p>
+          <p class="cs-copy">I built this color system myself rather than inheriting AdminLTE's defaults, and paired it with <b>Roboto</b> for the entire type scale one typeface, across headings, body copy and the monospaced data columns. So a bank back-office screen full of numbers reads as one consistent product rather than a template with patches.</p>
+        </div>
+
+        <div class="row g-3 my-4 reveal">
+          <div class="col-md-4"><div class="tier"><div class="tier__head" style="background:#152530">Tier 1 · Primitive</div><div class="tier__body">primary-600<br>success-600<br>warning-600<br>danger-600</div></div></div>
+          <div class="col-md-4"><div class="tier"><div class="tier__head" style="background:#00598E">Tier 2 · Semantic</div><div class="tier__body">color-action-primary<br>color-action-success<br>color-action-warning<br>color-action-danger</div></div></div>
+          <div class="col-md-4"><div class="tier"><div class="tier__head" style="background:#58676D">Tier 3 · Component</div><div class="tier__body">button.primary.bg<br>badge.approved.bg<br>badge.waiting.bg<br>alert.error.bg</div></div></div>
+        </div>
+
+        <div class="swatch-strip reveal">
+          <i style="background:#00385A"></i><i style="background:#00598E"></i><i style="background:#0069A7"></i>
+          <i style="background:#374850"></i><i style="background:#008642"></i><i style="background:#E4912B"></i><i style="background:#B13C2E"></i>
+        </div>
+
+        <h3 class="cs-h3 mt-5 mb-3 reveal">Iterating the approval table</h3>
+        <p class="cs-copy reveal">"It's the exact same data and columns, just with a different encoding. While the template renders status as text, the design system renders it as a signal and places the routine action on the row.</p>
+
+        <div class="row g-4 mt-1 compare product">
+          <div class="col-md-6 reveal">
+            <div class="ppanel"><table class="ptable">
+              <tr><th>Change ID</th><th>Status</th><th>Comments</th></tr>
+              <tr><td class="mono">1542814334291</td><td class="text-secondary">Waiting Approval</td><td>comment A</td></tr>
+              <tr><td class="mono">1542728542717</td><td class="text-secondary">Approved</td><td>test update user</td></tr>
+              <tr><td class="mono">1542726779530</td><td class="text-secondary">Disapproved</td><td>test update user</td></tr>
+            </table></div>
+            <p><b>Default template:</b> status is a word, same weight as everything else</p>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="ppanel"><table class="ptable">
+              <tr><th>Change ID</th><th>Status</th><th>Approve</th></tr>
+              <tr><td class="mono">1542814334291</td><td><span class="pbadgest" style="background:#E4912B">Waiting</span></td><td><i class="fa fa-check text-success"></i> <i class="fa fa-times text-danger ms-2"></i></td></tr>
+              <tr><td class="mono">1542728542717</td><td><span class="pbadgest" style="background:#008642">Approved</span></td><td class="text-secondary">—</td></tr>
+              <tr><td class="mono">1542726779530</td><td><span class="pbadgest" style="background:#B13C2E">Disapproved</span></td><td class="text-secondary">—</td></tr>
+            </table></div>
+            <p><b>Designed:</b> color carries status, action sits where the decision happens</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ Results: screens ═════════ -->
+  <section class="cs-section container" id="results">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">Results</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">The final screens</h2>
+      </div>
+    </div>
+
+    <div class="row g-4 g-lg-5 mt-1" data-gallery>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/dashboard.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/dashboard.png" alt="Dashboard" loading="lazy" decoding="async">
+        </button>
+        <h4>Dashboard</h4>
+        <p>KPI cards, a 14-day import trend and the exposure-by-type breakdown surface what needs attention the moment an admin logs in.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/dashboard-notifications.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/dashboard-notifications.png" alt="Dashboard with the notifications dropdown open" loading="lazy" decoding="async">
+        </button>
+        <h4>Dashboard - notifications open</h4>
+        <p>The notifications dropdown surfaces import errors and aging approvals without leaving the dashboard.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/dashboard-collapsed.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/dashboard-collapsed.png" alt="Dashboard with the sidebar collapsed" loading="lazy" decoding="async">
+        </button>
+        <h4>Dashboard - collapsed sidebar</h4>
+        <p>Collapsing the sidebar reclaims width for the data-dense panels without losing the ability to navigate.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/dashboard-dark.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/dashboard-dark.png" alt="Dashboard with the dark sidebar skin" loading="lazy" decoding="async">
+        </button>
+        <h4>Dashboard - dark sidebar</h4>
+        <p>The same dashboard read off the dark sidebar skin.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/data-import.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/data-import.png" alt="Data Import screen" loading="lazy" decoding="async">
+        </button>
+        <h4>Data Import</h4>
+        <p>Import history with status read as a color-coded badge instead of plain text, so errors register at a glance.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/upload-progress.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/upload-progress.png" alt="Upload file dialog mid-transfer" loading="lazy" decoding="async">
+        </button>
+        <h4>Data Import - upload in progress</h4>
+        <p>The upload dialog itself, mid-transfer, with the file-type and size limit stated up front rather than discovered on failure.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/data-management.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/data-management.png" alt="Data Management table" loading="lazy" decoding="async">
+        </button>
+        <h4>Data Management</h4>
+        <p>The raw exposures table is dense and sortable. It is deliberately left unstyled by status because it represents source data, not a queue.</p>
+      </div>
+      <div class="col-lg-6 screen reveal">
+        <button type="button" class="browser" data-lightbox="assets/risk-management/approve-changes.png">
+          <div class="browser__bar"><i></i><i></i><i></i><span>app.RiskManagement.com</span></div>
+          <img src="assets/risk-management/approve-changes.png" alt="Approve Changes queue" loading="lazy" decoding="async">
+        </button>
+        <h4>Approve Changes</h4>
+        <p>The approval queue: search, a period filter, solid status badges, and inline approve/reject for the requests that don't need a comment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 05 Outcomes ═════════ -->
+  <section class="cs-section container" id="outcomes">
+    <div class="row gy-4">
+      <div class="col-lg-3"><p class="cs-label">(05) Outcomes &amp; lessons learned</p></div>
+      <div class="col-lg-9">
+        <h2 class="cs-lead reveal">What the system delivers</h2>
+
+        <ol class="facts mt-4 reveal">
+          <li><span>(01)</span><div><b>A real Dashboard, not an empty menu item.</b> Pending approvals, import health, record counts and exposure breakdown are visible on login, instead of living only inside each sub-screen.</div></li>
+          <li><span>(02)</span><div><b>Approve / reject without leaving the table.</b> Routine change requests resolve inline; the full dialog stays for anything needing a comment or audit reason.</div></li>
+          <li><span>(03)</span><div><b>One shell, two skins, zero drift.</b> Light and dark sidebar are the same markup reading different token values, so a new nav item or state never has to be styled twice.</div></li>
+          <li><span>(04)</span><div><b>Status has exactly five colors, everywhere.</b> Success, warning, alert, info and neutral mean the same thing whether you're in an import log, an approval queue, or a badge.</div></li>
+          <li><span>(05)</span><div><b>A system the platform can grow into.</b> New modules across credit, market, operational and concentration risk inherit the tokens and components instead of inventing their own.</div></li>
+        </ol>
+
+        <h3 class="cs-h3 mt-5 mb-2 reveal">What I'd do differently</h3>
+        <p class="cs-note mb-3 reveal">Honest notes, because a case study without them isn't worth much.</p>
+        <ol class="facts reveal">
+          <li><span>(A)</span><div><b>Validate with real users earlier.</b> These decisions were grounded in domain research, stakeholder input, and established patterns for dense back-office tools, rather than moderated testing with bank risk officers.</div></li>
+          <li><span>(B)</span><div><b>Build the token system before the first screen, not alongside it.</b> Tokens were extracted from CSS that already existed, so I was reconciling decisions that had already shipped. While starting from the system would have been cleaner, working in parallel was the only realistic option for a project already in development.</div></li>
+          <li><span>(C)</span><div><b>Push further on the widest tables.</b> A 752-row, many-column exposures grid deserves its own dedicated pass: saved filter sets, column presets per role, and a considered approach to horizontal scroll.</div></li>
+        </ol>
+
+        <p class="cs-note mt-5 reveal">Style guide and UX structure designed on top of AdminLTE (MIT licensed). Tokens extracted from the product's production CSS.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-site="more-work"></div>
+<div data-site="footer"></div>
+
+<!-- Bootstrap JS powers the screenshot gallery (added by site.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="projects.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
