@@ -3,7 +3,7 @@
 
   To add a case study:
     1. Copy case-study-template.html  ->  your-project.html   (keep it in this folder)
-    2. Put its images in assets/your-project/
+    2. Put its images in images/your-project/
     3. Add one entry to PROJECTS below. It appears on the Work page, in the footer
        and in the "More work this way" row of every other case study.
 */
@@ -11,7 +11,7 @@ window.SITE = {
   name: 'Evelina Kounoukla',
   email: 'evelynkounoukla@gmail.com',
   tagline: 'UI/UX/Product designer currently crafting experiences at Trasys',
-  resume: 'assets/resume/Evelina-Kounoukla-Resume.pdf',
+  resume: 'evelina-kounoukla-resume.pdf',
   socials: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/evelynkounoukla/' }
   ]
@@ -25,7 +25,7 @@ window.PROJECTS = [
     subtitle: 'Product design · FinTech · Banking',  // card subtitle
     footerLabel: 'Risk Management: Platform UX & Design System',
     years: [2017, 2018],
-    cover: 'assets/risk-management/dashboard-dark.png'
+    cover: 'images/risk-management/dashboard-dark.png'
   },
   {
     slug: 'chemical-data',
@@ -34,7 +34,7 @@ window.PROJECTS = [
     subtitle: 'Web & mobile app · Science',
     footerLabel: 'Chemical Data: Web & Mobile App',
     years: [2024],
-    cover: 'assets/chemical-data/web-details.png'
+    cover: 'images/chemical-data/web-details.png'
   },
   {
     slug: 'estat-web-admin',
@@ -43,6 +43,6 @@ window.PROJECTS = [
     subtitle: 'eUI design system · Public sector',
     footerLabel: 'Estat Web Admin: eUI Redesign',
     years: [],                                       // add years when known
-    cover: 'assets/estat-web-admin/new-objects.png'
+    cover: 'images/estat-web-admin/new-objects.png'
   }
 ];
